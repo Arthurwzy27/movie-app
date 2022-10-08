@@ -15,7 +15,7 @@ const MovieCard = () => {
               <div className="movie-img"><img src={movie.img} alt='movie-img'/></div>
               <div className="movie-infos">
                 <div className="movie-title">{movie.title}</div>
-                <div className="movie-year">{movie.year}</div>
+                <div className="movie-year">{movie.year} year</div>
               </div>
             </div>
           )
