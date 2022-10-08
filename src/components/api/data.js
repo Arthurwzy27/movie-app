@@ -6,18 +6,13 @@ export const datas = [
 ]
 
 const getData = async () => {
-  const URL = `https://fake-movie-database-api.herokuapp.com/api?s=batman`
+  const URL = `https://www.fakerestapi.com/datasets/api/v1/movie-details-dataset.json`
   const data = await fetch(URL)
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => console.log(data.data))
 
-    const {
-      symbol,
-      name,
-      market_data: { current_price, price_change_24h,  price_change_percentage_24h}
-    } = data
-
-    return { symbol, name, current_price, price_change_24h, price_change_percentage_24h  }
+    const { title, directed_by, poster } = data.data;
+    return { title, directed_by, poster }
 }
 
 export { getData };
