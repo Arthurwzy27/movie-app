@@ -1,0 +1,12 @@
+.layout-container {
+  background-color: rgb(34, 34, 34);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  /* color: inherit; */
+}
