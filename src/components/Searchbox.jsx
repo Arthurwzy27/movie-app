@@ -43,8 +43,6 @@ const Searchbox = ({isShowing, hide}) => {
 
   const [dropdown, setDropdown] = useState(true);
 
-  // const { isShowing, toggle } = useModal();
-
   return (
     <div className='XXX'>
       <div className="search-container">
