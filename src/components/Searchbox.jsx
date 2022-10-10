@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import {  fetchMovieDetails, fetchSearchMovie } from '../components/api/dataService';
 import { Outlet, Link, useParams } from 'react-router-dom'
+import { IconContext } from "react-icons";
+import { BsSearch } from 'react-icons/bs';
+import { AiOutlineEnter } from 'react-icons/ai';
 
 
 import './SearchBox.css'
@@ -22,7 +25,6 @@ const Searchbox = ({isShowing, hide}) => {
 
   const [queryMovie, setQueryMovie] = useState('');
   const { data: search } = useQuery(['search', queryMovie], () => queryMovie !== '' && fetchSearchMovie(queryMovie))
-    // const { data: movieDetails } = useQuery(['movie details', movie_id], () => movie_id !== null && fetchMovieDetails(movie_id))
 
   const onChangeSearch = e => {
     setQueryMovie(e.target.value.toLowerCase())
@@ -37,8 +39,11 @@ const Searchbox = ({isShowing, hide}) => {
     <div className='XXX'>
       <div className="search-container">
         <div className="search-inner">
+          <IconContext.Provider value={{ color: "black", className: "global-class-name" }}>
+            <BsSearch onClick={() => console.log('Arthur')}/>
+          </IconContext.Provider>
           <input className='search-input' placeholder='Search for a movie' type="search"  value={queryMovie} onChange={onChangeSearch} />
-          <button className='search-input-btn' onClick={() => onSearch(queryMovie)}>Search</button>
+          <button className='search-input-btn' onClick={() => onSearch(queryMovie)}><AiOutlineEnter /></button>
         </div>
         <div className="search-dropdown">
           {search?.results?.filter((movie) => {
