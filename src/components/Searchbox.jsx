@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import {  fetchMovieDetails, fetchSearchMovie } from '../components/api/dataService';
 import { Outlet, Link, useParams } from 'react-router-dom'
-import { useNavigate } from "react-router-dom";
-import useModal from "../pages/useModal";
 
 
 import './SearchBox.css'
@@ -22,7 +20,6 @@ const Searchbox = ({isShowing, hide}) => {
   //   console.log("search ", searchTerm);
   // };
 
-  const [movie_id, setMovie_id] = useState('');
   const [queryMovie, setQueryMovie] = useState('');
   const { data: search } = useQuery(['search', queryMovie], () => queryMovie !== '' && fetchSearchMovie(queryMovie))
     // const { data: movieDetails } = useQuery(['movie details', movie_id], () => movie_id !== null && fetchMovieDetails(movie_id))
