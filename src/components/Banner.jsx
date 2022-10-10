@@ -1,8 +1,18 @@
-import React from 'react'
+import React from 'react';
 
-const Banner = () => {
+const Banner = ({ banner }) => {
+  // const banner_poster_path = banner?.results[0]?.backdrop_path;
+
   return (
-    <div className='banner'>Banner</div>
+    <>
+      {/* {banner_poster_path ?
+        <img className='banner-img'
+          src={`https://image.tmdb.org/t/p/w500/${banner_poster_path}`}
+          alt={banner?.results[0]?.original_title} />
+      : ''} */}
+      {/* <div className="banner-input">
+      </div> */}
+    </>
   )
 }
 
