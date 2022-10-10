@@ -41,8 +41,6 @@ const Searchbox = ({isShowing, hide}) => {
     setQueryMovie(searchTerm)
   }
 
-  const [dropdown, setDropdown] = useState(true);
-
   return (
     <div className='XXX'>
       <div className="search-container">
@@ -76,12 +74,8 @@ const Searchbox = ({isShowing, hide}) => {
         </div>
       </div>
 
-      {/* <div className="dropdown-content">
-        <input type='search'
-          className='banner-input-search'
-          placeholder='Search a movie...'
-          onChange={onSearch}
-        />
+      <div className="dropdown-content">
+        
 
         {data?.filter(movie => {
           if (queryMovie === '') { return movie }
@@ -97,7 +91,7 @@ const Searchbox = ({isShowing, hide}) => {
           )
         })
         }
-      </div> */}
+      </div>
     </div>
   )
 }
