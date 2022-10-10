@@ -73,22 +73,6 @@ const Searchbox = ({isShowing, hide}) => {
             ))}
         </div>
       </div>
-
-      <div className="dropdown-content">
-
-
-        
-        .map((movie, id) => {
-          return (
-          <ul key= {id} className='autocomplete-list'>
-
-            <li>{movie.original_title}</li>
-          </ul>
-
-          )
-        })
-        }
-      </div>
     </div>
   )
 }
