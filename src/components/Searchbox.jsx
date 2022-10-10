@@ -27,11 +27,6 @@ const Searchbox = ({isShowing, hide}) => {
   const { data: search } = useQuery(['search', queryMovie], () => queryMovie !== '' && fetchSearchMovie(queryMovie))
     // const { data: movieDetails } = useQuery(['movie details', movie_id], () => movie_id !== null && fetchMovieDetails(movie_id))
 
-  const getMovieDetails = (movie) => {
-    // console.log('getMovieDetails', movie)
-    setMovie_id(movie)
-  }
-
   const onChangeSearch = e => {
     setQueryMovie(e.target.value.toLowerCase())
   }
