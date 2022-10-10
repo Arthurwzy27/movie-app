@@ -75,12 +75,9 @@ const Searchbox = ({isShowing, hide}) => {
       </div>
 
       <div className="dropdown-content">
-        
 
-        {data?.filter(movie => {
-          if (queryMovie === '') { return movie }
-          else if (movie.orignal_title.toLowerCase().includes(queryMovie.toLowerCase())) { return movie }
-        })
+
+        
         .map((movie, id) => {
           return (
           <ul key= {id} className='autocomplete-list'>
