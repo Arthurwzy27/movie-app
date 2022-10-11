@@ -1,0 +1,88 @@
+.movie-detail-container {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  margin-top: 6rem;
+}
+
+.movie-detail-wrapper {
+  padding-top: 2rem;
+}
+
+.detail-movie-img {
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-movie-img1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  /* object-fit: cover; */
+  border-radius: 12px;
+}
+
+
+.detail-movie-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.movie-details {
+  padding: 1rem;
+  text-align: justify;
+}
+
+.movie-detail-info {
+  /* padding-top: 1rem */
+}
+
+.movie-detail-productor-img {
+  width: 5rem;
+  /* border-radius: 50%; */
+
+}
+
+/* .movie-detail-overview {
+padding: 1rem;
+text-align: justify;
+} */
+
+
+.credits-details {
+  padding-top: 1rem;
+  /* background-color: rgba(255, 255, 255, 0.301); */
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+  overflow-x: scroll;
+  gap: 15px
+}
+
+.details-actors-img {
+  width: 100px;
+}
+
+.actors-img {
+  object-fit: contain;
+  margin-bottom: -100px;
+
+}
+
+.details-actors-img {
+  /* display: relative; */
+  /* position: relative; */
+  border: 2px solid white;
+  width: 6rem;
+  height: 6rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.actors-img {
+  width: inherit;
+  margin: -12px 0;
+}
